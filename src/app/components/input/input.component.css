@@ -1,0 +1,17 @@
+.input-wrapper {
+  margin: 10px;
+}
+
+input,
+select {
+  border: 1px solid #bbb;
+}
+
+input {
+  padding: 5px;
+  border-right: none;
+}
+
+select {
+  padding: 4px;
+}

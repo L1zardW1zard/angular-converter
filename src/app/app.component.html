@@ -1,0 +1,27 @@
+<app-header></app-header>
+<div class="main-content">
+  <h4>Last update {{ lastUpdate }}</h4>
+  <div class="input-container">
+    <app-input
+      [rates]="rates"
+      [amount]="amount1"
+      [currentCurrency]="currency1"
+      [currencies]="currencies"
+      (amountChange)="amount1ChangeHadler($event)"
+      (currencyChange)="currency1ChangeHadler($event)"
+    >
+    </app-input>
+
+    <button (click)="onSwapClick()">Swap</button>
+
+    <app-input
+      [rates]="rates"
+      [amount]="amount2"
+      [currentCurrency]="currency2"
+      [currencies]="currencies"
+      (amountChange)="amount2ChangeHadler($event)"
+      (currencyChange)="currency2ChangeHadler($event)"
+    >
+    </app-input>
+  </div>
+</div>

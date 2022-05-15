@@ -1,0 +1,19 @@
+<div class="input-wrapper">
+  <input
+    type="text"
+    [(ngModel)]="amount"
+    (input)="onAmountChangeHandler($event)"
+  />
+  <select
+    [(ngModel)]="currentCurrency"
+    (change)="onSelectChangeHandler($event)"
+  >
+    <option
+      *ngFor="let curr of currencies"
+      [value]="curr"
+      [selected]="curr === currentCurrency"
+    >
+      {{ curr }}
+    </option>
+  </select>
+</div>
